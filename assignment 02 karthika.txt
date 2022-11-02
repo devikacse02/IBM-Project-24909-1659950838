@@ -1,0 +1,21 @@
+1  import time
+2  import RPi.GPIO as GPIO
+3  GPIO.setmode(GPIO.BOARD)
+4  GPIO.setup(11, GPIO.OUT)
+5  GPIO.setup(12, GPIO.OUT)
+6  GPIO.setup(13, GPIO.OUT)
+7
+8
+9  while true:
+10          GPIO.output(11,true) ## true on redled
+11          time.sleep(1)        ## wait for on second
+12          GPIO.output(11,false)## turn off redled
+13          time.sleep(1)        ## wait for one second
+14          GPIO.output(12,true) ## trun on yellowled
+15          time.sleep(1)        ## wait for one second
+16          GPIO.output(12,false)## turn off yellowled
+17          time.sleep(1)        ## wait for one second
+18          GPIO.output(13,turn) ## turn on greenled
+19          time.sleep(1)        ## wait for one second
+20          GPIO.output(13,false)## turn off greenled
+21          time.sleep(1)        ## wait for one second
